@@ -4,8 +4,9 @@ import cv2
 from PIL import Image, ImageTk
 from tkinter import messagebox
 import customtkinter as ctk
+# from customtkinter import CTkImage
 
-folder_path = "D:/Git Repository/FaceAttendanceSystem/FaceAttendance/data/"
+folder_path = "D:/Git Repository/PyFusion/FaceAttendance/data/"
 
 class App(ctk.CTk):
     def __init__(self, title, size):
@@ -26,18 +27,18 @@ class App(ctk.CTk):
         self.mainloop()
 
     def access_camera(self):
-            _, frame = self.cap.read()
-            self.imgRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            self.most_recent_capture = Image.fromarray(self.imgRGB)
-            self.resized_img = Image.fromarray(self.imgRGB).resize((self.label.winfo_width() - 4, self.label.winfo_height() - 4))
-            self.imgTK = ImageTk.PhotoImage(self.resized_img)
+        _, frame = self.cap.read()
+        self.imgRGB = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        self.most_recent_capture = Image.fromarray(self.imgRGB)
+        self.resized_img = Image.fromarray(self.imgRGB).resize((self.label.winfo_width() - 4, self.label.winfo_height() - 4))
+        self.imgTK = ImageTk.PhotoImage(self.resized_img)
 
-            #Set Image To The Label
-            self.label.imgtk = self.imgTK
-            self.label.configure(image=self.imgTK)
+        #Set Image To The Label
+        self.label.imgtk = self.imgTK
+        self.label.configure(image=self.imgTK)
 
-            #Recall Function
-            self.label.after(20, self.access_camera)
+        #Recall Function
+        self.label.after(20, self.access_camera)
     
     def create_user_window(self):
         global imgArray, canCreateWindow

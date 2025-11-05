@@ -9,7 +9,7 @@ import csv
 from datetime import datetime
 import win32com.client
 
-folder_path = "D:/Git Repository/FaceAttendanceSystem/FaceAttendance/data/"
+folder_path = "D:/Git Repository/PyFusion/FaceAttendance/data/"
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 speaker = win32com.client.Dispatch("SAPI.SpVoice")
