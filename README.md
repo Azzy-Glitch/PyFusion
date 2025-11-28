@@ -14,7 +14,7 @@ It covers fundamental concepts, project implementations, and creative experiment
 ## 📂 What’s Inside
 - 📝 Core Python concepts (functions, OOP, modules, etc.)  
 - 🔄 Problem-solving & algorithms in Python  
-- 📊 Data handling with libraries (NumPy, Pandas, Matplotlib, etc.)  
+- 📊 Data handling with libraries
 - ⚡ Automation scripts and mini-tools  
 - 🎯 Projects for practice and portfolio building  
 
@@ -31,6 +31,6 @@ The goal of this repo is to:
 
 ## 🛠️ Tech Stack
 - **Language:** Python 3  
-- **Libraries/Tools:** (add as you go, e.g., NumPy, Pandas, Matplotlib, Flask, etc.)  
+- **Libraries/Tools:** (os, pywhatkit, psutil, threading, Flask, etc.)  
 
 
