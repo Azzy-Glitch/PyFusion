@@ -1,13 +1,13 @@
 from core.registry import CommandRegistry
+import plugins.system
+import plugins.web
 
 class Engine:
     def __init__(self):
         self.registry = CommandRegistry()
 
     def load_plugins(self):
-        import plugins.system
-        import plugins.web
-
+        
         plugins.system.register(self.registry)
         plugins.web.register(self.registry)
 
